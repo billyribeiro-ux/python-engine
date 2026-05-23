@@ -81,7 +81,7 @@ The course is large enough that we build it in waves. Each wave is independently
 | 4 | Module 11 Modern ML, Module 12 Deep Learning for Time Series | **shipped** |
 | 5 | Module 13 RL, Module 14 Options Foundations, Module 15 Vol Surface | **shipped** |
 | 6 | Module 16 Production Strategies, Module 17 Frontier Strategies, Module 18 Scanners | **shipped** |
-| 7 | Module 19 Execution & Microstructure, Module 20 Risk & Portfolio, Module 21 Deployment, Appendix | |
+| 7 | Module 19 Execution & Microstructure, Module 20 Risk & Portfolio, Module 21 Deployment, Appendix | **shipped** |
 
 ## License
 

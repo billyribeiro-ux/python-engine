@@ -238,6 +238,37 @@ nav:
       - Frontier scanners: 18-scanners/03-frontier.md
       - Microstructure scanners: 18-scanners/04-microstructure.md
       - Composing daily reports: 18-scanners/05-composition.md
+  - Module 19 — Execution and Microstructure:
+      - 19-execution-and-microstructure/index.md
+      - Order book dynamics: 19-execution-and-microstructure/01-orderbook.md
+      - Kyle's lambda and VPIN: 19-execution-and-microstructure/02-kyle-vpin.md
+      - Realised kernels and pre-averaging: 19-execution-and-microstructure/03-realised-kernels.md
+      - Avellaneda-Stoikov detail: 19-execution-and-microstructure/04-avellaneda-stoikov.md
+      - Almgren-Chriss detail: 19-execution-and-microstructure/05-almgren-chriss.md
+      - RL for child orders: 19-execution-and-microstructure/06-rl-execution.md
+  - Module 20 — Risk and Portfolio:
+      - 20-risk-and-portfolio/index.md
+      - Drawdown discipline: 20-risk-and-portfolio/01-drawdowns.md
+      - VaR and CVaR: 20-risk-and-portfolio/02-var-cvar.md
+      - The Kelly trap: 20-risk-and-portfolio/03-kelly-trap.md
+      - Portfolio vol targeting: 20-risk-and-portfolio/04-vol-targeting.md
+      - HRP and NCO: 20-risk-and-portfolio/05-hrp-nco.md
+      - RMT correlation cleaning: 20-risk-and-portfolio/06-rmt.md
+  - Module 21 — Deployment:
+      - 21-deployment/index.md
+      - Paper trading first: 21-deployment/01-paper-trading.md
+      - Brokerage integration: 21-deployment/02-brokerages.md
+      - Order routing and idempotency: 21-deployment/03-routing.md
+      - Kill switches: 21-deployment/04-kill-switches.md
+      - Observability: 21-deployment/05-observability.md
+      - Postmortems: 21-deployment/06-postmortems.md
+  - Appendix:
+      - appendix/index.md
+      - Math refreshers: appendix/01-math-refreshers.md
+      - Reading list: appendix/02-reading-list.md
+      - Glossary: appendix/03-glossary.md
+      - Common mistakes: appendix/04-common-mistakes.md
+      - What to skip: appendix/05-what-to-skip.md
 
 extra:
   generator: false
