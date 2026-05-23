@@ -191,6 +191,29 @@ nav:
       - Mamba and state-space models: 12-deep-learning-ts/04-mamba.md
       - Neural ODEs and SDEs: 12-deep-learning-ts/05-neural-ode-sde.md
       - Diffusion models for paths: 12-deep-learning-ts/06-diffusion.md
+  - Module 13 — Reinforcement Learning:
+      - 13-reinforcement-learning/index.md
+      - The MDP framing of trading: 13-reinforcement-learning/01-mdp.md
+      - PPO, SAC, TD3: 13-reinforcement-learning/02-algorithms.md
+      - Custom gymnasium environments: 13-reinforcement-learning/03-gym-envs.md
+      - Avellaneda-Stoikov as RL: 13-reinforcement-learning/04-avellaneda-stoikov.md
+      - Almgren-Chriss optimal execution: 13-reinforcement-learning/05-optimal-execution.md
+      - Offline RL and sim-to-real: 13-reinforcement-learning/06-offline-rl.md
+  - Module 14 — Options Foundations:
+      - 14-options-foundations/index.md
+      - Black-Scholes properly: 14-options-foundations/01-black-scholes.md
+      - All the Greeks: 14-options-foundations/02-greeks.md
+      - Implied volatility solvers: 14-options-foundations/03-implied-vol.md
+      - American options: 14-options-foundations/04-american.md
+      - Put-call parity: 14-options-foundations/05-parity.md
+  - Module 15 — Vol Surface and Advanced Options:
+      - 15-vol-surface-greeks/index.md
+      - SVI and SSVI: 15-vol-surface-greeks/01-svi.md
+      - SABR: 15-vol-surface-greeks/02-sabr.md
+      - Heston: 15-vol-surface-greeks/03-heston.md
+      - Local volatility via Dupire: 15-vol-surface-greeks/04-local-vol.md
+      - Dealer GEX, vanna, charm: 15-vol-surface-greeks/05-dealer-flows.md
+      - Deep hedging: 15-vol-surface-greeks/06-deep-hedging.md
 
 extra:
   generator: false
