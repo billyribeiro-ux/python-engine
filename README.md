@@ -78,7 +78,7 @@ The course is large enough that we build it in waves. Each wave is independently
 | 1 | Scaffold + Module 0 Orientation, Module 1 Python Foundations, Module 2 Python Hacks, Module 3 NumPy Mastery | **shipped** |
 | 2 | Module 4 pandas + polars, Module 5 Data Engineering, Module 6 Stats & Probability, Module 7 Time Series | **shipped** |
 | 3 | Module 8 Classical Quant, Module 9 Backtesting, Module 10 ML Foundations | **shipped** |
-| 4 | Module 11 Modern ML, Module 12 Deep Learning for Time Series | |
+| 4 | Module 11 Modern ML, Module 12 Deep Learning for Time Series | **shipped** |
 | 5 | Module 13 RL, Module 14 Options Foundations, Module 15 Vol Surface | |
 | 6 | Module 16 Production Strategies, Module 17 Frontier Strategies, Module 18 Scanners | |
 | 7 | Module 19 Execution & Microstructure, Module 20 Risk & Portfolio, Module 21 Deployment, Appendix | |

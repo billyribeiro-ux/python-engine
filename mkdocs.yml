@@ -175,6 +175,22 @@ nav:
       - Calibration: 10-ml-foundations/04-calibration.md
       - Conformal prediction with MAPIE: 10-ml-foundations/05-conformal.md
       - End-to-end ML pipeline: 10-ml-foundations/06-pipeline.md
+  - Module 11 — Modern ML:
+      - 11-modern-ml/index.md
+      - XGBoost, LightGBM, CatBoost: 11-modern-ml/01-gbm.md
+      - Stacking and meta-labeling: 11-modern-ml/02-stacking.md
+      - SHAP for feature attribution: 11-modern-ml/03-shap.md
+      - Survival analysis: 11-modern-ml/04-survival.md
+      - Causal inference: 11-modern-ml/05-causal.md
+      - Gaussian processes: 11-modern-ml/06-gp.md
+  - Module 12 — Deep Learning for Time Series:
+      - 12-deep-learning-ts/index.md
+      - When deep beats gradient boosting: 12-deep-learning-ts/01-when-dl-wins.md
+      - TCN, N-BEATS, N-HiTS: 12-deep-learning-ts/02-tcn-nbeats.md
+      - Transformers for time series: 12-deep-learning-ts/03-transformers-ts.md
+      - Mamba and state-space models: 12-deep-learning-ts/04-mamba.md
+      - Neural ODEs and SDEs: 12-deep-learning-ts/05-neural-ode-sde.md
+      - Diffusion models for paths: 12-deep-learning-ts/06-diffusion.md
 
 extra:
   generator: false
