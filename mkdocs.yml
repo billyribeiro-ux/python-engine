@@ -214,6 +214,30 @@ nav:
       - Local volatility via Dupire: 15-vol-surface-greeks/04-local-vol.md
       - Dealer GEX, vanna, charm: 15-vol-surface-greeks/05-dealer-flows.md
       - Deep hedging: 15-vol-surface-greeks/06-deep-hedging.md
+  - Module 16 — Production Strategies:
+      - 16-production-strategies/index.md
+      - HMM regime overlay on momentum: 16-production-strategies/01-hmm-regime.md
+      - Kalman pairs at production grade: 16-production-strategies/02-kalman-pairs.md
+      - GBM + conformal sizing: 16-production-strategies/03-conformal-gbm.md
+      - Vol-targeted carry: 16-production-strategies/04-carry.md
+      - Post-earnings drift: 16-production-strategies/05-pead.md
+      - Calendar and diagonal spreads: 16-production-strategies/06-calendar-spreads.md
+  - Module 17 — Frontier Strategies:
+      - 17-frontier-strategies/index.md
+      - Hawkes processes: 17-frontier-strategies/01-hawkes.md
+      - Topological data analysis: 17-frontier-strategies/02-tda.md
+      - Transfer entropy networks: 17-frontier-strategies/03-transfer-entropy.md
+      - Signature methods: 17-frontier-strategies/04-signatures.md
+      - Graph neural networks: 17-frontier-strategies/05-gnn.md
+      - Diffusion-augmented scenarios: 17-frontier-strategies/06-diffusion-scenarios.md
+      - Meta-learning (MAML): 17-frontier-strategies/07-meta-learning.md
+  - Module 18 — Scanners:
+      - 18-scanners/index.md
+      - The scanner framework: 18-scanners/01-framework.md
+      - Production scanners: 18-scanners/02-production.md
+      - Frontier scanners: 18-scanners/03-frontier.md
+      - Microstructure scanners: 18-scanners/04-microstructure.md
+      - Composing daily reports: 18-scanners/05-composition.md
 
 extra:
   generator: false
