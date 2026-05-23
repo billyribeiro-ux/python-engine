@@ -42,8 +42,8 @@ site/
 # Notebooks
 .ipynb_checkpoints/
 
-# Local data
-data/
+# Local data (cache directory at repo root only — does NOT match engine/data/)
+/data/
 *.parquet
 *.feather
 *.csv

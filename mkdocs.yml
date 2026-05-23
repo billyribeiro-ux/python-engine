@@ -121,6 +121,36 @@ nav:
       - einsum and tensor contractions: 03-numpy-mastery/04-einsum.md
       - Strided rolling windows: 03-numpy-mastery/05-strided-windows.md
       - Numerical stability: 03-numpy-mastery/06-stability.md
+  - Module 4 — pandas + polars:
+      - 04-pandas-polars/index.md
+      - Index and MultiIndex: 04-pandas-polars/01-index-multiindex.md
+      - Joins and merge_asof: 04-pandas-polars/02-joins-asof.md
+      - Rolling, expanding, ewm: 04-pandas-polars/03-rolling.md
+      - GroupBy in depth: 04-pandas-polars/04-groupby.md
+      - Polars for pandas users: 04-pandas-polars/05-polars.md
+      - Arrow, Parquet, DuckDB: 04-pandas-polars/06-arrow-parquet-duckdb.md
+  - Module 5 — Data Engineering:
+      - 05-data-engineering/index.md
+      - A partitioned Parquet cache: 05-data-engineering/01-parquet-cache.md
+      - Async batch loaders: 05-data-engineering/02-async-batch.md
+      - Bias and corporate actions: 05-data-engineering/03-bias-and-corp-actions.md
+      - Options chain storage: 05-data-engineering/04-options-chains.md
+      - Live data and websockets: 05-data-engineering/05-live-data.md
+  - Module 6 — Stats & Probability:
+      - 06-stats-and-probability/index.md
+      - Hypothesis testing and p-hacking: 06-stats-and-probability/01-hypothesis-testing.md
+      - The bootstrap: 06-stats-and-probability/02-bootstrap.md
+      - Bayesian thinking: 06-stats-and-probability/03-bayesian.md
+      - Copulas and tail dependence: 06-stats-and-probability/04-copulas.md
+      - Extreme value theory: 06-stats-and-probability/05-evt.md
+  - Module 7 — Time Series:
+      - 07-time-series/index.md
+      - Stationarity tests: 07-time-series/01-stationarity.md
+      - ARIMA and GARCH: 07-time-series/02-arima-garch.md
+      - Kalman filters from scratch: 07-time-series/03-kalman.md
+      - Particle filters: 07-time-series/04-particle.md
+      - Wavelets and Hilbert: 07-time-series/05-wavelets.md
+      - Change-point detection: 07-time-series/06-change-points.md
 
 extra:
   generator: false
