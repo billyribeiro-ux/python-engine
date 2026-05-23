@@ -151,6 +151,30 @@ nav:
       - Particle filters: 07-time-series/04-particle.md
       - Wavelets and Hilbert: 07-time-series/05-wavelets.md
       - Change-point detection: 07-time-series/06-change-points.md
+  - Module 8 — Classical Quant:
+      - 08-classical-quant/index.md
+      - Factor models: 08-classical-quant/01-factor-models.md
+      - Momentum and mean reversion: 08-classical-quant/02-momentum-meanrev.md
+      - Ornstein-Uhlenbeck spreads: 08-classical-quant/03-ornstein-uhlenbeck.md
+      - Cointegration and pairs: 08-classical-quant/04-cointegration.md
+      - Portfolio construction: 08-classical-quant/05-portfolio.md
+      - Sizing with Kelly and CVaR: 08-classical-quant/06-sizing.md
+  - Module 9 — Backtesting:
+      - 09-backtesting/index.md
+      - The leakage bestiary: 09-backtesting/01-leakage.md
+      - Vectorised engine: 09-backtesting/02-vectorized-engine.md
+      - Event-driven engine: 09-backtesting/03-event-driven.md
+      - Cross-validation that doesn't leak: 09-backtesting/04-cv.md
+      - CPCV and Deflated Sharpe: 09-backtesting/05-cpcv-dsr.md
+      - Slippage and trading costs: 09-backtesting/06-slippage.md
+  - Module 10 — ML Foundations:
+      - 10-ml-foundations/index.md
+      - Bias-variance in low-SNR finance: 10-ml-foundations/01-bias-variance.md
+      - Feature engineering for markets: 10-ml-foundations/02-feature-engineering.md
+      - Time-series CV in practice: 10-ml-foundations/03-time-series-cv.md
+      - Calibration: 10-ml-foundations/04-calibration.md
+      - Conformal prediction with MAPIE: 10-ml-foundations/05-conformal.md
+      - End-to-end ML pipeline: 10-ml-foundations/06-pipeline.md
 
 extra:
   generator: false

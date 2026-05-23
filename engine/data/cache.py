@@ -78,7 +78,7 @@ class _Manifest:
     data: dict
 
     @classmethod
-    def load(cls, path: Path) -> "_Manifest":
+    def load(cls, path: Path) -> _Manifest:
         path.parent.mkdir(parents=True, exist_ok=True)
         if path.exists():
             return cls(path, json.loads(path.read_text()))
