@@ -1,0 +1,126 @@
+site_name: The Python Engine
+site_description: A distinguished-engineer course on Python, ML, and trading — stocks and options.
+site_author: Python Engine Course
+docs_dir: course
+site_dir: site
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search
+  - with-pdf:
+      output_path: pdf/python-engine-course.pdf
+      cover_title: The Python Engine
+      cover_subtitle: A distinguished-engineer course on Python, ML, and trading
+      enabled_if_env: ENABLE_PDF_EXPORT
+      copyright: Python Engine Course
+      toc_title: Contents
+      heading_shift: false
+
+nav:
+  - Home: index.md
+  - Module 0 — Orientation:
+      - 00-orientation/index.md
+      - How to read this course: 00-orientation/how-to-read.md
+      - Environment setup: 00-orientation/setup.md
+      - The universal data adapter: 00-orientation/data-adapter.md
+      - Course conventions: 00-orientation/conventions.md
+  - Module 1 — Python Foundations:
+      - 01-python-foundations/index.md
+      - The data model: 01-python-foundations/01-data-model.md
+      - Descriptors and dunder methods: 01-python-foundations/02-descriptors.md
+      - Iteration, generators, coroutines: 01-python-foundations/03-iteration.md
+      - Async, threads, processes, the GIL: 01-python-foundations/04-concurrency.md
+      - Typing for engineers: 01-python-foundations/05-typing.md
+      - Dataclasses, attrs, pydantic: 01-python-foundations/06-dataclasses.md
+  - Module 2 — Python Hacks:
+      - 02-python-hacks/index.md
+      - Iteration and lookup hacks: 02-python-hacks/01-iteration-hacks.md
+      - Collections you forgot you had: 02-python-hacks/02-collections.md
+      - Performance and profiling: 02-python-hacks/03-performance.md
+      - Plugin patterns and registries: 02-python-hacks/04-plugins.md
+  - Module 3 — NumPy Mastery:
+      - 03-numpy-mastery/index.md
+      - ndarray internals: 03-numpy-mastery/01-ndarray-internals.md
+      - Broadcasting deeply: 03-numpy-mastery/02-broadcasting.md
+      - Vectorization patterns: 03-numpy-mastery/03-vectorization.md
+      - einsum and tensor contractions: 03-numpy-mastery/04-einsum.md
+      - Strided rolling windows: 03-numpy-mastery/05-strided-windows.md
+      - Numerical stability: 03-numpy-mastery/06-stability.md
+
+extra:
+  generator: false
