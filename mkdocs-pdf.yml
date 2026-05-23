@@ -1,0 +1,19 @@
+# PDF-only overlay. Inherits from mkdocs.yml; adds the with-pdf plugin.
+#
+# Build with: `make pdf` (which sets ENABLE_PDF_EXPORT=1 and invokes
+# `mkdocs build -f mkdocs-pdf.yml`). Keeping this separate from mkdocs.yml
+# means the default `make site` build has no PDF-plugin warning and passes
+# --strict mode cleanly.
+INHERIT: mkdocs.yml
+
+plugins:
+  - search
+  - with-pdf:
+      output_path: pdf/python-engine-course.pdf
+      cover_title: The Python Engine
+      cover_subtitle: A distinguished-engineer course on Python, ML, and trading
+      copyright: Python Engine Course
+      toc_title: Contents
+      heading_shift: false
+      # Allow override via env so CI builds without PDF rendering at all.
+      enabled_if_env: ENABLE_PDF_EXPORT

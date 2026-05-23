@@ -58,6 +58,13 @@ You can read either track in isolation, but you'll get more from doing both: the
 - Module 19 — Execution and microstructure
 - Module 20 — Risk and portfolio
 - Module 21 — Deployment
+
+### Operational engineering (Phase 8)
+
+- Module 22 — Automation & production engineering: file handling at scale, CSV/Excel, database scripting, web scraping, CLI tools, scheduling, data pipelines, admin tooling, migrations & repair, AI workflows, FastAPI backends, enterprise patterns.
+
+### Reference
+
 - Appendix — math refreshers, reading list, glossary, common mistakes
 
 ## A note on honesty

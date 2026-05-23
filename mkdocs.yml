@@ -82,14 +82,6 @@ extra_javascript:
 
 plugins:
   - search
-  - with-pdf:
-      output_path: pdf/python-engine-course.pdf
-      cover_title: The Python Engine
-      cover_subtitle: A distinguished-engineer course on Python, ML, and trading
-      enabled_if_env: ENABLE_PDF_EXPORT
-      copyright: Python Engine Course
-      toc_title: Contents
-      heading_shift: false
 
 nav:
   - Home: index.md
@@ -262,6 +254,20 @@ nav:
       - Kill switches: 21-deployment/04-kill-switches.md
       - Observability: 21-deployment/05-observability.md
       - Postmortems: 21-deployment/06-postmortems.md
+  - Module 22 — Automation & Production Engineering:
+      - 22-automation-and-ops/index.md
+      - File handling at scale: 22-automation-and-ops/01-file-handling.md
+      - CSV, Excel, tabular interchange: 22-automation-and-ops/02-csv-and-excel.md
+      - Database scripting: 22-automation-and-ops/03-databases.md
+      - Web scraping done right: 22-automation-and-ops/04-web-scraping.md
+      - CLI tools and shell scripting: 22-automation-and-ops/05-cli-tools.md
+      - Scheduling (cron / systemd / APScheduler): 22-automation-and-ops/06-scheduling.md
+      - Data pipelines and ETL: 22-automation-and-ops/07-data-pipelines.md
+      - Admin tooling and remote ops: 22-automation-and-ops/08-admin-tooling.md
+      - Migrations and repair scripts: 22-automation-and-ops/09-migrations-and-repair.md
+      - AI workflows in production: 22-automation-and-ops/10-ai-workflows.md
+      - Backend systems with FastAPI: 22-automation-and-ops/11-backend-systems.md
+      - Enterprise production engineering: 22-automation-and-ops/12-production-engineering.md
   - Appendix:
       - appendix/index.md
       - Math refreshers: appendix/01-math-refreshers.md

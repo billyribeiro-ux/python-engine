@@ -1,13 +1,17 @@
 # The Python Engine
 
-A distinguished-engineer course on Python, machine learning, and trading — covering both stocks and options, with two parallel tracks:
+A distinguished-engineer course on Python, machine learning, and trading — covering both stocks and options, plus the operational engineering that turns research into production.
+
+Two parallel tracks for trading:
 
 - **Production track** — methods that actually ship at quant funds today.
 - **Frontier track** — the exotic stuff: neural SDEs, Hawkes processes, topological data analysis, transfer entropy, deep hedging, RL execution, GNNs on correlation graphs.
 
+Plus a dedicated **operational engineering** module (Module 22) covering automation, scripting, file handling, CSV/Excel, database scripting, web scraping, CLI tools, scheduling, ETL pipelines, admin tooling, migrations & repair scripts, AI workflows, FastAPI backends, and enterprise production patterns.
+
 The course is delivered as **interactive HTML** (with one-click copy on every code block, search, dark mode) and as a **paginated PDF book** for offline reading. The source is plain Markdown so it's also fully readable on GitHub.
 
-This is Phase 1 — see [Phase rollout](#phase-rollout) below for what lands when.
+**Status: complete.** 23 modules + appendix, **~157k words across 167 pages**, 33 passing tests, CI pipeline + pre-commit hooks. See [Phase rollout](#phase-rollout) below for what shipped when.
 
 ---
 
@@ -38,6 +42,25 @@ Run the tests (skips network tests when offline):
 ```bash
 make test
 ```
+
+Operational scripts:
+
+```bash
+make smoke         # end-to-end integration smoke (synthetic + real-data modes)
+make scanners      # daily scanner report against a default ETF universe
+make precommit     # install pre-commit hooks (ruff, black, file checks)
+```
+
+## CI
+
+`.github/workflows/ci.yml` runs on every push:
+
+- `ruff check` (lint)
+- `black --check` (formatting)
+- `pytest -m "not network"` (unit + integration)
+- `mkdocs build --strict` (docs build, zero warnings)
+- `python scripts/end_to_end_smoke.py --no-network` (synthetic end-to-end)
+- uploads the built site as an artifact
 
 ## What's in the box
 
@@ -82,6 +105,7 @@ The course is large enough that we build it in waves. Each wave is independently
 | 5 | Module 13 RL, Module 14 Options Foundations, Module 15 Vol Surface | **shipped** |
 | 6 | Module 16 Production Strategies, Module 17 Frontier Strategies, Module 18 Scanners | **shipped** |
 | 7 | Module 19 Execution & Microstructure, Module 20 Risk & Portfolio, Module 21 Deployment, Appendix | **shipped** |
+| 8 | Module 22 Automation & Production Engineering, CI/CD, pre-commit hooks, integration smoke, scanner runner | **shipped** |
 
 ## License
 
