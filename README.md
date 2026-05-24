@@ -7,11 +7,11 @@ Two parallel tracks for trading:
 - **Production track** — methods that actually ship at quant funds today.
 - **Frontier track** — the exotic stuff: neural SDEs, Hawkes processes, topological data analysis, transfer entropy, deep hedging, RL execution, GNNs on correlation graphs.
 
-Plus a dedicated **operational engineering** module (Module 22) covering automation, scripting, file handling, CSV/Excel, database scripting, web scraping, CLI tools, scheduling, ETL pipelines, admin tooling, migrations & repair scripts, AI workflows, FastAPI backends, and enterprise production patterns.
+Plus a complete **general-purpose Python engineering** track (Modules 22-27 + Cookbook) covering automation, scripting, file handling, CSV/Excel, database scripting, web scraping, CLI tools, scheduling, ETL pipelines, admin tooling, migrations & repair scripts, AI workflows, FastAPI backends, enterprise production patterns, testing & packaging, documents & media (PDF, OCR, images), network programming (sockets, gRPC, MQTT, ZeroMQ, WebSockets), systems & IPC, dates & calendars, regex, cryptography, JWT/OAuth, geospatial, and SciPy — plus a 100+ recipe Cookbook for everyday tasks.
 
 The course is delivered as **interactive HTML** (with one-click copy on every code block, search, dark mode) and as a **paginated PDF book** for offline reading. The source is plain Markdown so it's also fully readable on GitHub.
 
-**Status: complete.** 23 modules + appendix, **~157k words across 167 pages**, 33 passing tests, CI pipeline + pre-commit hooks. See [Phase rollout](#phase-rollout) below for what shipped when.
+**Status: complete.** 28 modules + cookbook + appendix, **~210k+ words across ~210+ pages**, 33+ passing tests, CI pipeline + pre-commit hooks. See [Phase rollout](#phase-rollout) below for what shipped when.
 
 ---
 
@@ -106,6 +106,7 @@ The course is large enough that we build it in waves. Each wave is independently
 | 6 | Module 16 Production Strategies, Module 17 Frontier Strategies, Module 18 Scanners | **shipped** |
 | 7 | Module 19 Execution & Microstructure, Module 20 Risk & Portfolio, Module 21 Deployment, Appendix | **shipped** |
 | 8 | Module 22 Automation & Production Engineering, CI/CD, pre-commit hooks, integration smoke, scanner runner | **shipped** |
+| 9 | Module 23 Testing & Packaging, Module 24 Documents & Media, Module 25 Network Programming, Module 26 Systems & IPC, Module 27 Stdlib & Scientific, Cookbook | **shipped** |
 
 ## License
 

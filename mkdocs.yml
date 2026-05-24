@@ -268,6 +268,50 @@ nav:
       - AI workflows in production: 22-automation-and-ops/10-ai-workflows.md
       - Backend systems with FastAPI: 22-automation-and-ops/11-backend-systems.md
       - Enterprise production engineering: 22-automation-and-ops/12-production-engineering.md
+  - Module 23 — Testing & Packaging:
+      - 23-testing-packaging/index.md
+      - pytest fundamentals: 23-testing-packaging/01-pytest-fundamentals.md
+      - Fixtures: 23-testing-packaging/02-fixtures.md
+      - Mocking: 23-testing-packaging/03-mocking.md
+      - Hypothesis (property-based): 23-testing-packaging/04-hypothesis.md
+      - Coverage and mutation: 23-testing-packaging/05-coverage-and-mutation.md
+      - pyproject.toml: 23-testing-packaging/06-pyproject.md
+      - Dependency management: 23-testing-packaging/07-dependency-management.md
+      - Publishing to PyPI: 23-testing-packaging/08-publishing.md
+  - Module 24 — Documents & Media:
+      - 24-documents-and-media/index.md
+      - Reading PDFs (PyMuPDF): 24-documents-and-media/01-pdf-reading.md
+      - Generating PDFs: 24-documents-and-media/02-pdf-generation.md
+      - Image fundamentals (Pillow): 24-documents-and-media/03-pillow.md
+      - Image pipelines (OpenCV): 24-documents-and-media/04-image-pipelines.md
+      - OCR with Tesseract: 24-documents-and-media/05-ocr.md
+      - Report generation: 24-documents-and-media/06-report-generation.md
+  - Module 25 — Network Programming:
+      - 25-network-programming/index.md
+      - Sockets fundamentals: 25-network-programming/01-sockets.md
+      - Async servers: 25-network-programming/02-async-servers.md
+      - gRPC: 25-network-programming/03-grpc.md
+      - MQTT: 25-network-programming/04-mqtt.md
+      - ZeroMQ: 25-network-programming/05-zeromq.md
+      - WebSockets in depth: 25-network-programming/06-websockets.md
+  - Module 26 — Systems & IPC:
+      - 26-systems-and-ipc/index.md
+      - Multiprocessing in depth: 26-systems-and-ipc/01-multiprocessing.md
+      - Shared memory: 26-systems-and-ipc/02-shared-memory.md
+      - Pipes, queues, signals: 26-systems-and-ipc/03-pipes-queues-signals.md
+      - The os module in depth: 26-systems-and-ipc/04-os-module.md
+      - Process management: 26-systems-and-ipc/05-process-management.md
+  - Module 27 — Stdlib & Scientific:
+      - 27-stdlib-and-scientific/index.md
+      - Dates and time zones: 27-stdlib-and-scientific/01-dates.md
+      - Business calendars: 27-stdlib-and-scientific/02-calendars.md
+      - Regex mastery: 27-stdlib-and-scientific/03-regex.md
+      - Cryptography: 27-stdlib-and-scientific/04-cryptography.md
+      - JWT and OAuth: 27-stdlib-and-scientific/05-jwt-oauth.md
+      - Geospatial: 27-stdlib-and-scientific/06-geospatial.md
+      - SciPy (signal/optimize/ndimage): 27-stdlib-and-scientific/07-scipy.md
+  - Cookbook:
+      - cookbook/index.md
   - Appendix:
       - appendix/index.md
       - Math refreshers: appendix/01-math-refreshers.md
