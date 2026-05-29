@@ -3,12 +3,13 @@
 from __future__ import annotations
 
 import socket
+from collections.abc import Iterator
 from contextlib import contextmanager
 from time import perf_counter
 
 
 @contextmanager
-def timed(label: str = "block"):
+def timed(label: str = "block") -> Iterator[None]:
     """Tiny ``with`` block that prints how long the body took.
 
     >>> with timed("sleep"):

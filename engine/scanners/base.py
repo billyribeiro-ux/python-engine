@@ -11,7 +11,7 @@ every scanner, instantiate by name, and run uniformly.
 
 from __future__ import annotations
 
-from collections.abc import Sequence
+from collections.abc import Callable, Sequence
 from typing import Protocol, runtime_checkable
 
 import pandas as pd
@@ -53,7 +53,7 @@ class _Registry:
 registry = _Registry()
 
 
-def scanner(name: str):
+def scanner(name: str) -> Callable[[type], type]:
     """Class decorator that registers the scanner under ``name``.
 
     The decorated class must implement ``scan(self, universe, asof)``. The
@@ -64,7 +64,7 @@ def scanner(name: str):
     def deco(cls: type) -> type:
         if not hasattr(cls, "scan"):
             raise TypeError(f"{cls!r} must implement scan(universe, asof)")
-        cls.name = name
+        setattr(cls, "name", name)  # noqa: B010 - dynamic attribute on the class
         return registry.register(name, cls)
 
     return deco

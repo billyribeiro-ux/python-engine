@@ -221,7 +221,7 @@ class Order:                       # internal shape
     ...
 
 wire = WireOrder.model_validate(payload)
-order = Order(symbol=wire.symbol, qty=wire.qty, ...)
+order = Order(symbol=wire.symbol, qty=wire.qty)   # ...plus the remaining fields
 ```
 
 That's the pattern. The validation boundary is explicit. Everything past it is fast and untyped-string-free.

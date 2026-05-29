@@ -33,14 +33,20 @@ jobs:
       - name: Black --check
         run: black --check engine tests scripts
 
-      - name: Pytest (no-network)
-        run: pytest -m "not network" --maxfail=1
+      - name: mypy
+        run: mypy engine
+
+      - name: Pytest (no-network, with coverage gate)
+        run: pytest -m "not network" --maxfail=1 --cov=engine --cov-report=term-missing --cov-fail-under=80
 
       - name: Build site (strict)
         run: mkdocs build --strict
 
       - name: End-to-end smoke (synthetic data)
         run: python scripts/end_to_end_smoke.py --no-network
+
+      - name: Verify course code blocks (syntax)
+        run: python scripts/verify_docs.py
 
       - name: Upload site artifact
         if: matrix.python-version == '3.13'

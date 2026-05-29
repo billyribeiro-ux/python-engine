@@ -22,12 +22,12 @@ from __future__ import annotations
 import os
 from dataclasses import dataclass
 from datetime import date, datetime
-from typing import Literal, Protocol, runtime_checkable
+from typing import Literal, Protocol, TypeAlias, runtime_checkable
 
 import pandas as pd
 
-Interval = Literal["1m", "5m", "15m", "1h", "1d", "1wk", "1mo"]
-DateLike = str | date | datetime | pd.Timestamp
+Interval: TypeAlias = Literal["1m", "5m", "15m", "1h", "1d", "1wk", "1mo"]
+DateLike: TypeAlias = str | date | datetime | pd.Timestamp
 
 
 # ---------------------------------------------------------------------------

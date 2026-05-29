@@ -1,4 +1,4 @@
-.PHONY: help install install-docs serve site site-strict pdf test test-all lint fmt clean assets smoke scanners precommit
+.PHONY: help install install-docs serve site site-strict pdf test test-all lint typecheck fmt lock verify-docs clean assets smoke scanners precommit
 
 help:
 	@echo "Targets:"
@@ -8,10 +8,13 @@ help:
 	@echo "  site           Build the static HTML site into ./site"
 	@echo "  site-strict    Build with --strict (CI uses this)"
 	@echo "  pdf            Build the single PDF book at site/pdf/"
-	@echo "  test           Run pytest, excluding network tests"
+	@echo "  test           Run pytest (no network) with coverage gate"
 	@echo "  test-all       Run every test, including network-dependent ones"
-	@echo "  lint           Ruff + Black --check"
+	@echo "  lint           Ruff + Black --check + mypy"
+	@echo "  typecheck      mypy engine"
 	@echo "  fmt            Format with Black + Ruff --fix"
+	@echo "  lock           Regenerate requirements.lock with uv"
+	@echo "  verify-docs    Execute the runnable course code snippets"
 	@echo "  assets         Regenerate chart assets used in the course"
 	@echo "  smoke          End-to-end integration smoke test (synthetic data)"
 	@echo "  scanners       Run the daily scanner report against a default universe"
@@ -47,7 +50,7 @@ scanners:
 	python scripts/run_scanners.py
 
 test:
-	pytest -m "not network"
+	pytest -m "not network" --cov=engine --cov-report=term-missing --cov-fail-under=80
 
 test-all:
 	pytest
@@ -55,10 +58,20 @@ test-all:
 lint:
 	ruff check engine tests scripts
 	black --check engine tests scripts
+	mypy engine
+
+typecheck:
+	mypy engine
 
 fmt:
 	black engine tests scripts
 	ruff check --fix engine tests scripts
+
+lock:
+	uv pip compile pyproject.toml --extra core --extra ml --extra dev -o requirements.lock
+
+verify-docs:
+	python scripts/verify_docs.py
 
 precommit:
 	pip install pre-commit

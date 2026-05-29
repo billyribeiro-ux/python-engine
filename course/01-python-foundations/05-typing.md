@@ -56,7 +56,7 @@ A common use is typing callback functions precisely:
 class StrategyCb(Protocol):
     def __call__(self, bars: pd.DataFrame, ctx: dict) -> pd.Series: ...
 
-def backtest(strategy: StrategyCb, ...) -> "Result":
+def backtest(strategy: StrategyCb, *args, **kwargs) -> "Result":
     ...
 ```
 

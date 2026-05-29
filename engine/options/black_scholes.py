@@ -163,7 +163,7 @@ def implied_vol(
     if not (intrinsic - tol <= target_price <= upper_bound + tol):
         return float("nan")
 
-    def diff(sigma):
+    def diff(sigma: float) -> float:
         return float(price(S, K, T, r, q, sigma, kind=kind) - target_price)
 
     lo, hi = 1e-6, 5.0

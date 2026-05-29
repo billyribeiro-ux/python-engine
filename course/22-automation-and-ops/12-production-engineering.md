@@ -45,7 +45,7 @@ Reads `APP_DATABASE_URL` (or `database_url` from `.env`) and validates the schem
 
 For dev/staging/prod, layer config files:
 
-```python
+```yaml
 # config.yaml
 base:
   feed_name: yfinance
