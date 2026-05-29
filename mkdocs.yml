@@ -99,6 +99,7 @@ nav:
       - Async, threads, processes, the GIL: 01-python-foundations/04-concurrency.md
       - Typing for engineers: 01-python-foundations/05-typing.md
       - Dataclasses, attrs, pydantic: 01-python-foundations/06-dataclasses.md
+      - Modern Python (3.12-3.14): 01-python-foundations/07-modern-python.md
   - Module 2 — Python Hacks:
       - 02-python-hacks/index.md
       - Iteration and lookup hacks: 02-python-hacks/01-iteration-hacks.md
@@ -183,6 +184,7 @@ nav:
       - Mamba and state-space models: 12-deep-learning-ts/04-mamba.md
       - Neural ODEs and SDEs: 12-deep-learning-ts/05-neural-ode-sde.md
       - Diffusion models for paths: 12-deep-learning-ts/06-diffusion.md
+      - Time-series foundation models: 12-deep-learning-ts/07-foundation-models.md
   - Module 13 — Reinforcement Learning:
       - 13-reinforcement-learning/index.md
       - The MDP framing of trading: 13-reinforcement-learning/01-mdp.md
@@ -268,6 +270,7 @@ nav:
       - AI workflows in production: 22-automation-and-ops/10-ai-workflows.md
       - Backend systems with FastAPI: 22-automation-and-ops/11-backend-systems.md
       - Enterprise production engineering: 22-automation-and-ops/12-production-engineering.md
+      - Agentic AI, MCP, extended thinking: 22-automation-and-ops/13-agentic-ai.md
   - Module 23 — Testing & Packaging:
       - 23-testing-packaging/index.md
       - pytest fundamentals: 23-testing-packaging/01-pytest-fundamentals.md

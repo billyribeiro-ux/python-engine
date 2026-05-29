@@ -115,7 +115,7 @@ df.loc[df.symbol == "SPY", "close"] = 100
 
 `df[mask]["close"] = ...` is chained indexing. Pandas can't tell whether the intermediate is a view or a copy, so it sometimes writes through and sometimes doesn't. The fix is the single `.loc[]` form with `(row_indexer, col_indexer)`.
 
-The new **Copy-on-Write** semantics (pandas 2.x, default in 3.0) eliminate the ambiguity by *always* copying — but the `.loc[]` form is still the right way to write it.
+**Copy-on-Write** (CoW) — opt-in in pandas 2.x and the **default in pandas 3.0** (shipped) — eliminates the ambiguity by making chained assignment predictably *not* write through (and removing the `SettingWithCopyWarning` era). Even with CoW on, the single `.loc[]` form is still the right way to write a conditional assignment. Pandas 3.0 also defaults string columns to **PyArrow-backed strings**, which are far more memory-efficient than the old `object` dtype — another reason to stop storing text as `object`.
 
 ## Sin #5 — `iterrows`
 

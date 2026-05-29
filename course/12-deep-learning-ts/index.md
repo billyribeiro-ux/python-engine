@@ -10,5 +10,6 @@ Pages:
 4. **[Mamba and state-space models](04-mamba.md)** — the post-transformer landscape.
 5. **[Neural ODEs and SDEs](05-neural-ode-sde.md)** — continuous-time models for irregular data.
 6. **[Diffusion models for synthetic market paths](06-diffusion.md)** — generative models for stress testing and data augmentation.
+7. **[Time-series foundation models](07-foundation-models.md)** — TimesFM, Chronos, Moirai, TimeGPT; zero-shot forecasting and where it does (and doesn't) help.
 
 Start with **[When deep learning beats gradient boosting](01-when-dl-wins.md)**.

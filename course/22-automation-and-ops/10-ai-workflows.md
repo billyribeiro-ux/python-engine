@@ -213,7 +213,7 @@ Three patterns that keep AI bills sane:
 
 ### 1. Tier by capability
 
-Use the smallest model that works. Claude Haiku for simple classification, Sonnet for most reasoning, Opus only when needed.
+Use the smallest model that works. **Claude Haiku 4.5** (`claude-haiku-4-5`) for simple classification, **Sonnet 4.6** (`claude-sonnet-4-6`) for most reasoning, **Opus 4.8** (`claude-opus-4-8`) — the most capable of the current family — only for the hardest tasks where the cost is justified.
 
 ```python
 def classify(text: str) -> str:

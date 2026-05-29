@@ -226,8 +226,6 @@ order = Order(symbol=wire.symbol, qty=wire.qty, ...)
 
 That's the pattern. The validation boundary is explicit. Everything past it is fast and untyped-string-free.
 
-## End of Module 1
+You now know enough Python to write data systems that don't fall over, are clearly typed, and use the right concurrency for the workload. One more foundations chapter rounds out the module — the language features that landed in the current Python releases.
 
-You now know enough Python to write data systems that don't fall over, are clearly typed, and use the right concurrency for the workload. The next module is a pure utility belt — the everyday hacks that distinguish a senior from a competent Python user. Then we hit NumPy, where vectorisation will buy you the next two orders of magnitude.
-
-Continue to **[Module 2 — Python Hacks](../02-python-hacks/index.md)**.
+Continue to **[Modern Python: what changed in 3.12–3.14](07-modern-python.md)**.

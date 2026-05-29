@@ -212,10 +212,8 @@ Every chapter in this module exists in service of boring. File handling that doe
 
 Get boring right, and the interesting parts (the strategies, the models, the frontier methods) get to actually run.
 
-## End of Module 22 and the course
+## Onward
 
-You've now seen, in roughly this order, the foundations (Python + NumPy + pandas), the data layer (engineering + statistics + time series), the quant core (classical + backtesting + ML), the modern stack (boosting + DL + RL), the options machinery, the strategy modules (production + frontier), the scanners, the execution + microstructure, the risk + portfolio construction, the deployment discipline, and now the full operational engineering layer that holds the whole system together.
+You've now seen the foundations (Python + NumPy + pandas), the data layer, the quant core, the modern ML/DL/RL stack, the options machinery, the strategy modules, the scanners, execution + microstructure, risk + portfolio, deployment, and the production-engineering discipline that holds it together. One chapter remains in this module — the modern agentic-AI layer that increasingly sits on top of all of it.
 
-**The Python Engine course is complete.**
-
-Go build something boring.
+Continue to **[Agentic AI, MCP, and extended thinking](13-agentic-ai.md)**.

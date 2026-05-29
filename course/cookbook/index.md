@@ -2,22 +2,22 @@
 
 100+ short, copy-pasteable recipes for everyday Python tasks. Index below; jump to whichever section you need.
 
-- **[Files & paths](#files-and-paths)**
-- **[Text & strings](#text-and-strings)**
-- **[Dates & times](#dates-and-times)**
-- **[HTTP & APIs](#http-and-apis)**
+- **[Files & paths](#files-paths)**
+- **[Text & strings](#text-strings)**
+- **[Dates & times](#dates-times)**
+- **[HTTP & APIs](#http-apis)**
 - **[JSON, YAML, TOML](#json-yaml-toml)**
-- **[CSV & Excel](#csv-and-excel)**
+- **[CSV & Excel](#csv-excel)**
 - **[Databases](#databases)**
 - **[Concurrency](#concurrency)**
-- **[Subprocesses & shell](#subprocesses-and-shell)**
-- **[Environment & config](#environment-and-config)**
+- **[Subprocesses & shell](#subprocesses-shell)**
+- **[Environment & config](#environment-config)**
 - **[Logging](#logging)**
-- **[Crypto & hashing](#crypto-and-hashing)**
-- **[Numeric & arrays](#numeric-and-arrays)**
+- **[Crypto & hashing](#crypto-hashing)**
+- **[Numeric & arrays](#numeric-arrays)**
 - **[Pandas one-liners](#pandas-one-liners)**
-- **[Errors & retries](#errors-and-retries)**
-- **[System & OS](#system-and-os)**
+- **[Errors & retries](#errors-retries)**
+- **[System & OS](#system-os)**
 
 ---
 

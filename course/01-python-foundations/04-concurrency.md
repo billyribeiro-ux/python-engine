@@ -31,16 +31,51 @@ What this means in practice:
 | HTTP / disk I/O | **Yes**, threads block on the kernel and other threads run. |
 | Subprocess / file system | **Yes**, same reason. |
 
-### Free-threaded CPython (3.13+)
+### Free-threaded CPython (3.13 experimental → 3.14 supported)
 
-Python 3.13 ships an experimental **free-threaded** build (PEP 703) that removes the GIL. It's opt-in (`--disable-gil` at compile time) and slower in single-threaded code today, but it's the future. Once it ships fast and stable, the right answer for many CPU-bound workloads becomes "use threads". Until then, **multiprocessing remains the safe bet for CPU parallelism**.
+Python 3.13 *introduced* the free-threaded build (PEP 703) as experimental. Python 3.14 (Oct 2025) promoted it to **officially supported** (PEP 779) — no longer a tech preview. The free-threaded interpreter ships as a separate binary, `python3.14t`, and removes the GIL entirely, so pure-Python threads run on multiple cores in parallel.
 
-You can detect it at runtime:
+Two practical consequences as of 2026:
+
+1. **CPU-bound Python threads now scale** on the free-threaded build. The old "threads are useless for CPU work" rule is relaxed *if* you're running `python3.14t`.
+2. **The standard build still has the GIL.** Most deployments, wheels, and libraries still target the GIL build, and the free-threaded build pays a small single-thread overhead (a few percent, down from ~40% in early 3.13). So **multiprocessing remains the safe, portable default** until the ecosystem fully catches up — but free-threading is now a real option, not a someday.
+
+Detect it at runtime (the modern check — `sys.flags.no_gil` no longer exists):
 
 ```python
 import sys
-sys.flags.no_gil  # True on a free-threaded build
+import sysconfig
+
+gil_enabled = sys._is_gil_enabled()                 # False on free-threaded with GIL off
+is_freethreaded_build = bool(sysconfig.get_config_var("Py_GIL_DISABLED"))
+print(gil_enabled, is_freethreaded_build)
 ```
+
+!!! warning "C-extension compatibility"
+    A C extension must declare free-threading support (the `Py_mod_gil` slot) or the interpreter silently re-enables the GIL when it's imported. As of 2026, NumPy, pandas, and most of the scientific stack ship free-threaded wheels — but check your specific dependencies before relying on parallel threads.
+
+### Subinterpreters — the third concurrency axis (3.14)
+
+Python 3.14 added **multiple interpreters to the standard library** (PEP 734) via `concurrent.interpreters`. Each subinterpreter has isolated module state — lighter than processes (no spawn cost, no pickling to share a buffer), more isolated than threads. On the free-threaded build they run truly in parallel; on the standard build each carries its own GIL.
+
+```python
+from concurrent import interpreters
+
+interp = interpreters.create()
+interp.exec("import math; print(math.sqrt(16))")     # isolated interpreter
+
+# Pass data via queues
+queue = interpreters.create_queue()
+interp.prepare_main(q=queue)
+interp.exec("q.put(sum(range(1000)))")
+print(queue.get())                                    # 499500
+```
+
+The decision tree gains a fourth option:
+
+> **CPU-bound, want isolation without process overhead, on 3.14+** → **subinterpreters** (`concurrent.interpreters`).
+
+In practice (2026): subinterpreters are promising but young. Use `ProcessPoolExecutor` for portable CPU parallelism today; reach for subinterpreters when process-startup cost or IPC serialisation is the bottleneck and you're on 3.14+.
 
 ## `concurrent.futures` — the boring, correct API
 

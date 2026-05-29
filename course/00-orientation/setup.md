@@ -4,14 +4,14 @@ You need three things: a recent Python, a virtualenv, and the package installed 
 
 ## Python version
 
-This course targets **Python 3.11 or newer**. We use a handful of features that landed across 3.10–3.12 (structural pattern matching, `Self`, `tomllib`, faster CPython, better tracebacks).
+This course targets **Python 3.11 or newer**. We use features that landed across 3.10–3.14 (structural pattern matching, `Self`, `tomllib`, the `type`/generic syntax, faster CPython, better tracebacks). The current release as of 2026 is **Python 3.14** (released October 2025), which is what we recommend for a fresh install — you get the modern syntax, t-strings, stdlib `zstd`, and the now-supported free-threaded build. Anything ≥ 3.11 runs the course; features needing a newer interpreter are flagged inline (see [Module 1 ch7](../01-python-foundations/07-modern-python.md)).
 
 ```bash
 python3 --version
-# Python 3.11.x or 3.12.x or 3.13.x is fine
+# 3.11.x – 3.14.x all work; 3.14 recommended for new installs
 ```
 
-If you're on macOS, the system Python is too old. Install via [pyenv](https://github.com/pyenv/pyenv) or `brew install python@3.12`. On Linux, use your distro's Python or `pyenv`. On Windows, use the official installer or WSL.
+If you're on macOS, the system Python is too old. Install via [pyenv](https://github.com/pyenv/pyenv) or `brew install python@3.14`. On Linux, use your distro's Python or `pyenv`. On Windows, use the official installer or WSL. For the free-threaded interpreter, install the `t` variant (e.g. `python3.14t`).
 
 ## Virtualenv
 

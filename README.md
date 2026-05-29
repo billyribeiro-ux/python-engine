@@ -11,7 +11,7 @@ Plus a complete **general-purpose Python engineering** track (Modules 22-27 + Co
 
 The course is delivered as **interactive HTML** (with one-click copy on every code block, search, dark mode) and as a **paginated PDF book** for offline reading. The source is plain Markdown so it's also fully readable on GitHub.
 
-**Status: complete.** 28 modules + cookbook + appendix, **~210k+ words across ~210+ pages**, 33+ passing tests, CI pipeline + pre-commit hooks. See [Phase rollout](#phase-rollout) below for what shipped when.
+**Status: complete and current.** 28 modules + cookbook + appendix, **~193k words across 208 pages**, 37 passing tests, CI pipeline (Python 3.11–3.13) + pre-commit hooks. **Last reviewed for currency: 29 May 2026** — targets Python 3.14 (free-threading, t-strings, stdlib zstd), NumPy 2.x, pandas 3.0, and the 2024–2026 wave of time-series foundation models and agentic-AI / MCP tooling. See [Phase rollout](#phase-rollout) below for what shipped when.
 
 ---
 
@@ -107,6 +107,7 @@ The course is large enough that we build it in waves. Each wave is independently
 | 7 | Module 19 Execution & Microstructure, Module 20 Risk & Portfolio, Module 21 Deployment, Appendix | **shipped** |
 | 8 | Module 22 Automation & Production Engineering, CI/CD, pre-commit hooks, integration smoke, scanner runner | **shipped** |
 | 9 | Module 23 Testing & Packaging, Module 24 Documents & Media, Module 25 Network Programming, Module 26 Systems & IPC, Module 27 Stdlib & Scientific, Cookbook | **shipped** |
+| 10 | **Currency pass (May 2026)**: Python 3.14 (free-threading, subinterpreters, t-strings, deferred annotations, stdlib zstd), NumPy 2.x + pandas 3.0 notes, time-series foundation models (Module 12), agentic AI / MCP / extended thinking (Module 22) | **shipped** |
 
 ## License
 

@@ -20,6 +20,7 @@ Pages:
 10. **[AI workflows in production](10-ai-workflows.md)** — Anthropic / OpenAI batch processing, prompt engineering for ops, embeddings + vector stores, RAG basics, cost control.
 11. **[Backend systems with FastAPI](11-backend-systems.md)** — internal APIs, async services, webhooks, background tasks, dependency injection.
 12. **[Enterprise production engineering](12-production-engineering.md)** — secrets, configuration layering, observability, deployment patterns, on-call hygiene.
+13. **[Agentic AI, MCP, and extended thinking](13-agentic-ai.md)** — the tool-use loop, the Model Context Protocol, extended thinking, and the human-in-the-loop discipline.
 
 Read sequentially if you're new to operational engineering. Skim and dip if you're already a working SRE / platform engineer.
 

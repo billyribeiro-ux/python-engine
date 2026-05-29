@@ -167,8 +167,6 @@ Diffusion models are the right tool for **generating** realistic financial scena
 
 For all of the above, the cost of getting them right is real but justifiable for a portfolio you can't afford to misjudge.
 
-## End of Module 12
+One more architecture class rounds out the module: pretrained **time-series foundation models**, the biggest shift in the field since 2024.
 
-You now have the working tour of modern deep learning for time series — from the lightweight (TCN, N-BEATS) to the cutting-edge (Mamba, Neural SDEs, diffusion). The next module — **Reinforcement Learning** — gives you the framework for problems where the *action* matters: execution, sizing, market-making. The course's strategy modules (16, 17, 18) build on everything that came before.
-
-Continue to **[Module 13 — Reinforcement Learning](../13-reinforcement-learning/index.md)**.
+Continue to **[Time-series foundation models](07-foundation-models.md)**.

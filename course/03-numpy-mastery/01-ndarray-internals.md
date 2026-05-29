@@ -164,4 +164,16 @@ If you internalise:
 
 — then you can predict the performance and memory of any NumPy code by inspection. That's the foundation everything else in this module stands on.
 
+## A note on NumPy 2.x
+
+NumPy 2.0 (mid-2024) was the first major version bump in 18 years, and 2.x is the current line as of 2026. The mental model above is unchanged, but a few things moved that bite when you run older code or examples:
+
+- **Removed aliases.** `np.float_`, `np.int0`, `np.bool8`, `np.NaN`, `np.infty` are gone. Use `np.float64`, `np.intp`, `np.bool_`, `np.nan`, `np.inf`.
+- **Scalar repr changed.** `np.float64(3.0)` now prints as `np.float64(3.0)`, not `3.0`. Cosmetic, but it breaks doctests and string-matched tests.
+- **`copy=False` is now strict.** `np.array(x, copy=False)` *raises* if a copy is unavoidable (instead of silently copying). Use `np.asarray(x)` for "view if possible, copy if needed."
+- **Renames.** `np.trapz` → `np.trapezoid`; `np.in1d` → `np.isin`; several `np.lib` paths moved.
+- **Cleaner namespace.** Many rarely-used functions left the top-level `np.` namespace for submodules.
+
+The course's code targets NumPy 2.x. If you're maintaining a codebase pinned to 1.26, the official `ruff` rule set (`NPY201`) flags every 2.0-incompatible usage automatically — run it before upgrading.
+
 Continue to **[Broadcasting deeply](02-broadcasting.md)**.
