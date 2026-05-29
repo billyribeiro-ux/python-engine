@@ -6,5 +6,12 @@ just by being imported and decorated.
 """
 
 from .base import Scanner, registry, scanner
+from .concrete import RealisedVolRankScanner, ZScoreMomentumScanner
 
-__all__ = ["Scanner", "registry", "scanner"]
+__all__ = [
+    "RealisedVolRankScanner",
+    "Scanner",
+    "ZScoreMomentumScanner",
+    "registry",
+    "scanner",
+]

@@ -1,4 +1,13 @@
-"""Models - HMMs, Kalman filters, gradient boosters, NNs, RL agents.
+"""Models: Kalman filters and HMM regime detection.
 
-Most of this package is populated in Modules 7-13.
+Production-grade implementations of the algorithms walked through in
+Modules 7, 8, and 16 of the course. Pure NumPy / SciPy — no heavy
+dependencies — so they install cleanly and run anywhere.
 """
+
+from __future__ import annotations
+
+from .hmm import GaussianHMM2
+from .kalman import KalmanFilter, KalmanPairs
+
+__all__ = ["GaussianHMM2", "KalmanFilter", "KalmanPairs"]

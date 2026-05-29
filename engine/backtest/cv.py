@@ -105,17 +105,17 @@ def deflated_sharpe(observed: float, sharpes: Iterable[float], T: int) -> float:
     """
     from scipy.stats import norm
 
-    sharpes = np.asarray(list(sharpes), dtype=float)
-    n_trials = len(sharpes)
+    arr = np.asarray(list(sharpes), dtype=float)
+    n_trials = len(arr)
     if n_trials == 0:
         return float("nan")
-    sd = sharpes.std(ddof=1) if n_trials > 1 else 0.0
+    sd = float(arr.std(ddof=1)) if n_trials > 1 else 0.0
     e_max = sd * (
         (1 - np.euler_gamma) * norm.ppf(1 - 1 / n_trials)
         + np.euler_gamma * norm.ppf(1 - 1 / (n_trials * np.e))
     )
     # standard error of the observed sharpe, under the null
-    se = np.sqrt((1 - sharpes.mean() * observed + 0.5 * observed**2) / max(T - 1, 1))
+    se = np.sqrt((1 - float(arr.mean()) * observed + 0.5 * observed**2) / max(T - 1, 1))
     if se <= 0:
         return float("nan")
     return float(norm.cdf((observed - e_max) / se))
